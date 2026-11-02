@@ -128,9 +128,10 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
-ASGI_APPLICATION = 'G_R.routing.application'
+ASGI_APPLICATION = 'G_R.asgi.application'
 CHANNEL_LAYERS = {
     "default": {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        "BACKEND": "channels.layers.InMemoryChannelLayer"
     }
 }
+
